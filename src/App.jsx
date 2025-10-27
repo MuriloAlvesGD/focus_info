@@ -46,9 +46,6 @@ function App() {
                         <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a>
                     </li>
                     <li>
-                        <a href="#compilacao">Compilação</a>
-                    </li>
-                    <li>
                         <a href="#instalacao">Instalação</a>
                     </li>
                     <li>
@@ -103,10 +100,15 @@ function App() {
 
                 <h3 id="instalacao">Instalação</h3>
                 <ol>
+                    <li>Clique no <strong>+</strong> no canto superior direito e clique no simbolo de download</li>
+                    <li>abra a pasta de download do seu pc e extraia o seguinte arquivo:</li>
+                    <pre>
+                        <code>focus_haven.zip</code>
+                    </pre>
                     <li>Abra o navegador e na barra de pesquisa acesse:</li>
                     <pre><code>chrome://extensions/</code></pre>
                     <li>Ative o <strong>modo de desenvolvedor</strong> no canto superior direito.</li>
-                    <li>Clique em <strong>Carregar sem compactação</strong> e, na janela que abrir, navegue até o diretório do projeto e selecione a pasta <strong>dist</strong>.</li>
+                    <li>Clique em <strong>Carregar sem compactação</strong> e, na janela que abrir, navegue até a pasta em que você extraiu o projeto e selecione a pasta <strong>focus_haven</strong>.</li>
                     <li><strong>Pronto!</strong> A extensão será instalada e aparecerá em seu menu de extensões.</li>
                 </ol>
 
