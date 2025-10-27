@@ -1,84 +1,122 @@
-//COMPONENTS
-import Carousel from "./components/Carousel/Carousel.jsx";
-import ImageInput from "./components/ImageInput/ImageInput.jsx";
-import PhoneInput from "./components/PhoneInput.jsx";
-
-//ASSETS
 import "./App.css";
-import defaultImageIcon from "./assets/defaultImageIcon.png";
-import profileImage from "./assets/profileImage.jpeg";
-import Icons from "./utils/Icons.jsx";
-
-//OUTROS
-import { useState } from "react";
-import projectsJSON from "./utils/projects.json";
+import { useState, useRef } from "react";
 
 function App() {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const icons = ["java", "spring", "postgres", "mongodb", "js", "nodejs", "react", "html", "css"];
-    const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
-
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    };
+    const formRef = useRef(null);
 
     const handleSubject = (e) => {
         e = e.target.value.trim();
-        setSubject(`IDEIA DE PROJETO - ${e}`);
+        setSubject(`FEEDBACK FOCUS HAVEN - ${e}`);
+    };
+
+    const handleExternalSubmit = () => {
+        const form = document.getElementById("form-submit");
+        form.submit();
     };
 
     return (
         <div className="App">
-            <h1 id="title">PORTFÓLIO<br/>MuriloAlvesGD</h1>
-            <header className="App-header">
-                <div id="profile-card">
-                    <img id="profile-img" src={profileImage} alt="foto de perfil" />
-                    <img
-                        id="typing-name"
-                        src="https://readme-typing-svg.herokuapp.com?font=&size=18&pause=1000&color=F7F7F7&background=FFFFFF00&center=true&vCenter=true&width=280&height=30&lines=Murilo+dos+Santos+Alves"
-                        alt="Typing SVG"
-                    />
-                </div>
-                <div id="git-img">
-                    <img
-                        id="stats"
-                        src="https://github-readme-stats.vercel.app/api/top-langs/?username=MuriloAlvesGD&layout=compact&hide_border=true&title_color=ffffff&text_color=ffffff&icon_color=ffffff&bg_color=2B2B2EFF"
-                        alt="infos"
-                    />
-                    <div id="git-icons">
-                        {icons.map((i, index) => (
-                            <img key={index} className="icons" src={`https://skillicons.dev/icons?i=${i}&theme=dark`} alt="icons" />
-                        ))}
-                    </div>
-                </div>
-            </header>
+            <h1 id="title">FOCUS HAVEN</h1>
             <div className="Topic-divisor">
                 <div className="line" />
-                <span>PROJETOS</span>
+                <span>SOBRE O PROJETO</span>
                 <div className="line" />
             </div>
-            <Carousel marginProp={"20px"} arrowSize={"clamp(2rem, 1rem + 5vw, 3rem)"}>
-                {projectsJSON.map((p, index) => (
-                    <div key ={index} className="project-card">
-                        <div className="container-img">
-                            <div className="logo">
-                                <Icons langs={p.technology} />
-                            </div>
-                            <a href={p.git_link} target="_blank" rel="noopener noreferrer">
-                                <h3 className="project-title" href={p.git_link}>
-                                    {p.title}
-                                </h3>
-                            </a>       {/*Coloque o base url pra rodar a desgraça do deploy*/}
-                            <img src={`/portfolio/projectsImages/${p.title}.png`} alt="project" className="project-img" onError={(e) => { e.target.onerror = null; e.target.src = defaultImageIcon; }} />
-                        </div>
-                        <div className="description">
-                            <h3>DESCRIÇÃO</h3>
-                            <p>{p.description}</p>
-                        </div>
-                    </div>
-                ))}
-            </Carousel>
+            <div className="readme-section">
+                <p>
+                    O projeto <strong>Focus Haven</strong> é uma ferramenta que busca ser um refúgio para todos aqueles
+                    que buscam melhorar seu foco, independente da atividade. O projeto inclui o <strong>Memo</strong>,
+                    inspirado na ideia do famoso{" "}
+                    <a href="https://pt.wikipedia.org/wiki/Tamagotchi" target="_blank" rel="noopener noreferrer">
+                        TAMAGOCHI
+                    </a>
+                    . Em resumo, trata-se de um "pet virtual", mas com funcionalidades que vão além dessa definição.
+                </p>
+
+                <h3>Índice</h3>
+                <ul>
+                    <li>
+                        <a href="#historia">História</a>
+                    </li>
+                    <li>
+                        <a href="#caracteristicas">Características</a>
+                    </li>
+                    <li>
+                        <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a>
+                    </li>
+                    <li>
+                        <a href="#compilacao">Compilação</a>
+                    </li>
+                    <li>
+                        <a href="#instalacao">Instalação</a>
+                    </li>
+                    <li>
+                        <a href="#atencao">Atenção</a>
+                    </li>
+                </ul>
+
+                <h3 id="historia">História</h3>
+                <p>
+                    O <strong>Focus Haven</strong> deriva de uma ideia que foi escrita há bastante tempo, chamada "MEU
+                    PALÁCIO MENTAL", que também seria uma ferramenta de estudos e teria o <strong>Memo</strong> como
+                    personagem principal, representando o subconsciente ou a própria MEMOria. A ideia original era mais
+                    complexa e, possivelmente, ineficiente. Assim, buscou-se simplificá-la e melhorar sua usabilidade e
+                    aplicabilidade, resultando no projeto <strong>Focus Haven</strong>.
+                </p>
+
+                <h3 id="caracteristicas">Características</h3>
+                <ul>
+                    <li>
+                        <strong>Método Pomodoro</strong>: A técnica foi implementada com parâmetros configuráveis,
+                        cronômetro pausável e penalidades por interrupções.
+                    </li>
+                    <li>
+                        <strong>PET Virtual - Memo</strong>: Utilizado para humanizar a solução e gerenciar recompensas
+                        e punições.
+                    </li>
+                    <li>
+                        <strong>Bloqueio de Distrações</strong>: O usuário pode informar quais sites são fontes de
+                        distração e será redirecionado ao acessar esses sites.
+                    </li>
+                </ul>
+
+                <h3 id="compilacao">Instalação</h3>
+                <ol>
+                    <li>Clone o repositório:</li>
+                    <pre>
+                        <code>git clone https://github.com/muriloalvesgd/focus_haven.git</code>
+                    </pre>
+                    <li>Navegue até o diretório do projeto:</li>
+                    <pre>
+                        <code>cd focus_haven</code>
+                    </pre>
+                    <li>Instale as dependências:</li>
+                    <pre>
+                        <code>npm install</code>
+                    </pre>
+                    <li>Compile a versão de produção:</li>
+                    <pre>
+                        <code>npm run build</code>
+                    </pre>
+                </ol>
+
+                <h3 id="instalacao">Instalação</h3>
+                <ol>
+                    <li>Abra o navegador e na barra de pesquisa acesse:</li>
+                    <pre><code>chrome://extensions/</code></pre>
+                    <li>Ative o <strong>modo de desenvolvedor</strong> no canto superior direito.</li>
+                    <li>Clique em <strong>Carregar sem compactação</strong> e, na janela que abrir, navegue até o diretório do projeto e selecione a pasta <strong>dist</strong>.</li>
+                    <li><strong>Pronto!</strong> A extensão será instalada e aparecerá em seu menu de extensões.</li>
+                </ol>
+
+                <h3 id="atencao">Atenção</h3>
+                <p>
+                    Este é um projeto ainda em desenvolvimento e contém diversos bugs e falhas. Achou algum erro?{" "}
+                    <strong>Preencha o formulário abaixo</strong>. Sua contribuição será de grande ajuda para o
+                    desenvolvimento dessa solução!
+                </p>
+            </div>
             <div className="Topic-divisor">
                 <div className="line" />
                 <span>CONTATO</span>
@@ -86,6 +124,7 @@ function App() {
             </div>
             <div className="contact-box">
                 <form
+                    id="form-submit"
                     action="https://formsubmit.co/568a02d6bcaa9401e6e5456dae10e152"
                     method="post"
                     target="_self"
@@ -93,48 +132,36 @@ function App() {
                     <input type="hidden" name="_template" value="box" />
                     <input type="hidden" name="_captcha" value="false" />
                     <input type="text" name="_honey" id="honeyPot" />
-                    <input type="hidden" name="_next" value="https://MuriloAlvesGD.github.io/portfolio" />
+                    <input type="hidden" name="_next" value="https://MuriloAlvesGD.github.io/focus_info" />
                     <input type="hidden" name="_subject" value={subject} />
                     <input
                         type="hidden"
                         name="_blacklist"
                         value="padrão de spam, termo banido, oferta especial, clique aqui, ganhe dinheiro rápido, promoção exclusiva, grátis, sem custo, produto milagroso, última chance, não perca, urgente, confidencial, apenas hoje, inscrição gratuita, satisfação garantida, risco zero, aumente seu tráfego, melhore sua vida, venda rápida"
                     />
-                    <h2>VAMOS FALAR DO SEU PROJETO?</h2>
-                    <h4>CONTATOS</h4>
+                    <h2>GOSTARIA DE CONTRIBUIR COM NOSSO PROJETO?</h2>
                     <input
                         required
-                        id="name"
+                        id="titulo"
                         type="text"
-                        name="nome"
+                        name="titulo"
                         placeholder=""
                         onChange={(e) => handleSubject(e)}
                     />
-                    <label htmlFor="name">nome</label>
-                    <input
-                        required
-                        id="email"
-                        type="email"
-                        name="email"
-                        placeholder=""
-                        value={email}
-                        onChange={(e) => handleEmailChange(e)}
-                    />
-                    <label htmlFor="email">e-mail</label>
-                    <PhoneInput id="phone" />
-                    <label htmlFor="phone">telefone</label>
-                    <h4>DESCRIÇÃO</h4>
+                    <label htmlFor="titulo">titulo</label>
+                    <h3>DESCRIÇÃO</h3>
                     <textarea required id="description" name="Descrição"></textarea>
-                    {/*<h4>IMAGENS ANEXADAS</h4>
-                    <ImageInput /> */}
-                    {regex.test(email) ? (
-                        <button id="formSubmit" type="submit">
-                            ENVIAR
-                        </button>
-                    ) : (
-                        ""
-                    )}
+                    <p id="formSubmit" onClick={() => handleExternalSubmit()}>
+                        ENVIAR
+                    </p>
                 </form>
+            </div>
+            <div class="readme-section">
+                <h3 id="atencao">Cafézinho</h3>
+                <p>
+                    Como todo bom desenvolvedor. O desse projeto é movido por café, então fique a vontade para mandar o
+                    pix do cafézino para ele nessa chave: <span id="pix">muriloalves.dev@gmail.com</span>. Eternamento grato a você!
+                </p>
             </div>
         </div>
     );

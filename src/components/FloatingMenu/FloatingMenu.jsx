@@ -2,6 +2,7 @@ import "./floatingMenu.css";
 import { ImCross } from "react-icons/im";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Icons from "../icons/icons.jsx";
 
 function FloatingMenu() {
     return (
@@ -12,17 +13,11 @@ function FloatingMenu() {
                     <ImCross />
                 </label>
                 <nav id="navBtn">
-                    <a href={"https://www.instagram.com/murilo.dev_"} target="_blank" rel="noopener noreferrer">
-                        <RiInstagramFill className="btn" />
+                    <a href={"./focus_haven.zip"} target="_blank" rel="noopener noreferrer">
+                        <Icons icon="download" width="25px" className="btn" />
                     </a>
-                    <a href={"https://github.com/MuriloAlvesGD"} target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="btn" />
-                    </a>
-                    <a
-                        href={"https://www.linkedin.com/in/murilo-s-alves-86920727b"}
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <FaLinkedin className="btn" />
+                    <a href={"https://github.com/MuriloAlvesGD/focus_haven"} target="_blank" rel="noopener noreferrer">
+                        <Icons icon="github" width="25px" className="btn" />
                     </a>
                 </nav>
             </div>

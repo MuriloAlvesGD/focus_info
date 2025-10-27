@@ -14,14 +14,14 @@
 }
 
 #labelMenu {
-    color: var(--cornsilk);
+    color: var(--rich-black);
     height: fit-content;
     width: fit-content;
     transition: 0.5s ease-in;
     rotate: 225deg;
     padding: 1rem;
     border-radius: 25px;
-    background-color: var(--persimmon);
+    background-color: var(--linen);
     z-index: 1;
 }
 #labelMenu:hover {
@@ -34,7 +34,6 @@
 
 input:checked ~ #labelMenu {
     rotate: 0deg;
-    background-color: #df5201;
 }
 
 #menuBtn:checked ~ #navBtn {
@@ -50,11 +49,11 @@ input:checked ~ #labelMenu {
     border-radius: 25px;
     gap: 1rem;
     transition: 0.5s ease-in-out;
-    background-color: var(--persimmon);
-    color: var(--cornsilk);
+    background-color: var(--linen);
+    color: var(--rich-black);
 
     .btn {
-        color: var(--cornsilk);
+        color: var(--rich-black);
         font-size: 34px;
         transition: 0.2s ease-in;
     }
@@ -63,6 +62,5 @@ input:checked ~ #labelMenu {
 #navBtn .btn:hover {
     scale: 1.2;
     opacity: 0.9;
-    filter: drop-shadow(0 0 2px white);
     cursor: pointer;
 }
