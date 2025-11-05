@@ -17,7 +17,7 @@ function App() {
 
     return (
         <div className="App">
-            <h1 id="title">FOCUS HAVEN</h1>
+            <img className="logo-full" src="/focus_info/black_full.png" alt="Focus Haven LOGO"/>
             <div className="Topic-divisor">
                 <div className="line" />
                 <span>SOBRE O PROJETO</span>
@@ -77,27 +77,6 @@ function App() {
                         distração e será redirecionado ao acessar esses sites.
                     </li>
                 </ul>
-
-                <h3 id="compilacao">Instalação</h3>
-                <ol>
-                    <li>Clone o repositório:</li>
-                    <pre>
-                        <code>git clone https://github.com/muriloalvesgd/focus_haven.git</code>
-                    </pre>
-                    <li>Navegue até o diretório do projeto:</li>
-                    <pre>
-                        <code>cd focus_haven</code>
-                    </pre>
-                    <li>Instale as dependências:</li>
-                    <pre>
-                        <code>npm install</code>
-                    </pre>
-                    <li>Compile a versão de produção:</li>
-                    <pre>
-                        <code>npm run build</code>
-                    </pre>
-                </ol>
-
                 <h3 id="instalacao">Instalação</h3>
                 <ol>
                     <li>Clique no <strong>+</strong> no canto superior direito e clique no simbolo de download</li>
@@ -134,7 +113,7 @@ function App() {
                     <input type="hidden" name="_template" value="box" />
                     <input type="hidden" name="_captcha" value="false" />
                     <input type="text" name="_honey" id="honeyPot" />
-                    <input type="hidden" name="_next" value="https://MuriloAlvesGD.github.io/focus_info" />
+                    <input type="hidden" name="_next" value="https://MuriloAlvesGD.github.io/focus_info/" />
                     <input type="hidden" name="_subject" value={subject} />
                     <input
                         type="hidden"

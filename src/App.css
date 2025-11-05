@@ -10,10 +10,9 @@
   padding: 70px 0;
 }
 
-#title {
-  color: var(--mindaro);
-  margin: 0 0 15px;
-  font-size: clamp(2rem, 1rem + 5vw, 3.5rem);
+.logo-full{
+  width: 40%;
+  filter: drop-shadow(0 0 8px rgb(4, 6, 12));
 }
 
 .Topic-divisor {
