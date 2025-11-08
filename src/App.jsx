@@ -43,9 +43,6 @@ function App() {
                         <a href="#caracteristicas">Características</a>
                     </li>
                     <li>
-                        <a href="#tecnologias-utilizadas">Tecnologias Utilizadas</a>
-                    </li>
-                    <li>
                         <a href="#instalacao">Instalação</a>
                     </li>
                     <li>
