@@ -1,7 +1,5 @@
 import "./floatingMenu.css";
 import { ImCross } from "react-icons/im";
-import { RiInstagramFill } from "react-icons/ri";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Icons from "../icons/icons.jsx";
 
 function FloatingMenu() {

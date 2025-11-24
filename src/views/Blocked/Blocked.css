@@ -1,0 +1,49 @@
+.page-blocked {
+    text-align: center;
+    background-color: var(--rich-black);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.04);
+    border-radius: 25px;
+    padding: 20px 20px 30px;
+    box-shadow: 2px 5px 10px black;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#close-btn {
+    color: var(--linen);
+    margin: 0 0 0 auto;
+    font-size: larger;
+}
+
+.logo-blocked {
+    margin: -10px 0 5px 0
+}
+
+.blocked-text{
+    p {
+        color: var(--linen)
+    };
+
+    h2 {
+        margin: 0;
+        font-size: 30px;
+        text-decoration: underline
+    }
+
+    h3, h2 {
+        color: var(--mindaro)
+    }
+}

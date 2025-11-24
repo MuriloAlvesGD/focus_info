@@ -1,4 +1,4 @@
-.App {
+.Page {
   text-align: center;
   background-color: var(--rich-black);
   min-height: 100vh;
@@ -150,21 +150,4 @@ span:not(#image-container span) {
   background-color: var(--linen);
   color: var(--rich-black);
   opacity: 0.8;
-}
-
-@media (max-width: 490px) {
-  .App-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin: 0;
-  }
-
-  #profile-card,
-  #git-img,
-  #git-icons {
-    width: 100%;
-    box-sizing: border-box;
-  }
 }
