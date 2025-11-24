@@ -4,10 +4,10 @@ import Blocked from "./views/Blocked/Blocked"
 
 function Router(colors) {
     return (
-        <BrowserRouter basename="https://muriloalvesgd.github.io/focus_info/">
+        <BrowserRouter basename="/focus_info">
             <Routes>
-                <Route path="" element={<App/>} />
-                <Route path="blocked/:url" element={<Blocked/>}/>
+                <Route path="/" element={<App/>} />
+                <Route path="/blocked/:url" element={<Blocked/>}/>
             </Routes>
         </BrowserRouter>
     );
