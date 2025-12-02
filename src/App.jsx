@@ -17,9 +17,6 @@ function App() {
         // Obtendo os parâmetros da URL
         const params = new URLSearchParams(url.search);
 
-        console.log(url)
-        console.log(params)
-
         if (params.size == 1) {
             navigate(`/blocked/${params.get("q")}`);
         }

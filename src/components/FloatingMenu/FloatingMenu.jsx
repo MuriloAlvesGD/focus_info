@@ -11,7 +11,7 @@ function FloatingMenu() {
                     <ImCross />
                 </label>
                 <nav id="navBtn">
-                    <a href={"./focus_haven.zip"} target="_blank" rel="noopener noreferrer">
+                    <a href={"./focus_info/focus_haven.zip"} target="_blank" rel="noopener noreferrer">
                         <Icons icon="download" width="25px" className="btn" />
                     </a>
                     <a href={"https://github.com/MuriloAlvesGD/focus_haven"} target="_blank" rel="noopener noreferrer">
