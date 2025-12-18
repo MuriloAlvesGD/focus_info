@@ -1,5 +1,6 @@
 import "./Page.css";
 import { useState, useRef } from "react";
+import Carousel from "../../components/Carousel/Carousel.jsx";
 
 function Page() {
     const [subject, setSubject] = useState("");
@@ -95,6 +96,16 @@ function Page() {
                     desenvolvimento dessa solução!
                 </p>
             </div>
+            <div className="Topic-divisor">
+                <div className="line" />
+                <span>TUTORIAL DE INSTALAÇÃO</span>
+                <div className="line" />
+            </div>
+                <Carousel arrowSize={"clamp(2rem, 1rem + 5vw, 3rem)"}>
+                    {Array.from({ length: 10 }, (_, i) => (
+                        <img className="tutorial-img" key={i + 1} src={`/focus_info/tutorial/${i + 1}.png`} alt={`tutorial image-${i}`}/>
+                    ))}
+                </Carousel>
             <div className="Topic-divisor">
                 <div className="line" />
                 <span>CONTATO</span>
