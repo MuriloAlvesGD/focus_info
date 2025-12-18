@@ -9,7 +9,7 @@ function Blocked() {
     return (
         <div className="page-blocked">
             <div className="container">
-                <ImCross id="close-btn" onClick={() => navigate("/")} />
+                <ImCross id="close-btn" onClick={() => navigate("..")} />
                 <img className="logo-full logo-blocked" src="/focus_info/black_full.png" alt="Logo do Focus Haven" />
                 <span>URL BLOQUEADA:</span>
                 <div className="blocked-text">
